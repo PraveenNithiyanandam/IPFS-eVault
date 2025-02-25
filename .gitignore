@@ -1,0 +1,53 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+env/
+venv/
+*.egg-info/
+
+# Flask
+instance/
+.webassets-cache/
+
+# Database
+*.sqlite3
+*.db
+*.mongodb
+*.log
+*.bak
+
+# Environment variables
+.env
+
+# Node modules (for frontend if using npm/yarn)
+node_modules/
+
+# Tailwind CSS build output (if using npm or yarn)
+dist/
+build/
+
+# Logs
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Coverage reports
+.coverage
+.coverage.*
+nosetests.xml
+test-coverage.xml
+*.cover
+
+# Flask-MongoDB
+.mongod
+
+
+Blockchain/
