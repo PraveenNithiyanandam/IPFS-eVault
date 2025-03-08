@@ -37,7 +37,6 @@
           <!-- Sidebar component, swap this element with another sidebar if you like -->
           <div class="flex grow flex-col gap-y-5 overflow-y-auto px-6 pb-4 bg-indigo-600 ring-1 ring-white/10">
             <div class="flex h-16 shrink-0 items-center">
-                          <!-- <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=white" alt="Your Company"> -->
  
             </div>
             <nav class="flex flex-1 flex-col">
@@ -62,24 +61,7 @@
                         File Inbox
                       </a>
                     </li>
-                    <!-- <li>
-                      <a href="/user_manual"
-                        class="text-white hover:text-white hover:bg-indigo-700 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold items-center">
-                        User Manual
-                      </a>
-                    </li> -->
-                    <li>
-                      <a href="/existing_records"
-                        class="text-white hover:text-white hover:bg-indigo-700 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold items-center">
-                        Existing Records
-                      </a>
-                    </li>
-                    <!-- <li>
-                      <a href="#"
-                        class="text-white hover:text-white hover:bg-indigo-700 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold items-center">
-                        Verification
-                      </a>
-                    </li> -->
+                    
                   </ul>
                 </li>
                 <li class="mt-auto">
@@ -99,7 +81,6 @@
     <div class="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col min-h-screen">
       <div class="flex grow flex-col gap-y-5 overflow-y-auto bg-indigo-600 px-6 pb-4 ring-1 ring-white/10">
         <div class="flex h-16 shrink-0 items-center">
-                        <!-- <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=white" alt="Your Company"> -->
 
         </div>
         <nav class="flex flex-1 flex-col">
@@ -124,24 +105,6 @@
                     File Inbox
                   </a>
                 </li>
-                <!-- <li>
-                  <a href="/user_manual"
-                    class="text-white hover:bg-indigo-700 group items-center flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
-                    User Manual
-                  </a>
-                </li> -->
-                <li>
-                  <a href="/existing_records"
-                    class="text-white hover:bg-indigo-700 group items-center flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
-                    Existing Records
-                  </a>
-                </li>
-                <!-- <li>
-                  <a href="#"
-                    class="text-white hover:bg-indigo-700 group flex items-center gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
-                    Verification
-                  </a>
-                </li> -->
               </ul>
             </li>
             <li class="mt-auto">
@@ -192,22 +155,32 @@
         </div>
       </div>
 
-
       <main class="py-10 w-full bg-gradient-to-br from-indigo-100 to-purple-200 min-h-screen">
         <div class="px-4 sm:px-6 lg:px-8 w-full">
           <div class="w-full max-w-4xl mx-auto bg-white rounded-lg shadow-2xl overflow-hidden">
             <div class="p-8">
               <h1 class="text-3xl font-extrabold text-gray-900 mb-6 text-center">
                 <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600">
-                  ETH-IPFS File Upload
+                  ETH-IPFS eVault
                 </span>
               </h1>
               
-              <button id="connectMetamask" class="w-full mb-6 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 shadow-lg">
-                Connect MetaMask
-              </button>
+              <div class="mb-6 bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
+                <div class="flex">
+                  <div class="flex-shrink-0">
+                    <svg class="h-5 w-5 text-blue-400" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <div class="ml-3">
+                    <p class="text-sm text-blue-800">
+                      Your files are uploaded to IPFS and securely recorded on the Ethereum blockchain using our centrally funded account. No wallet connection required!
+                    </p>
+                  </div>
+                </div>
+              </div>
               
-              <form id="uploadForm" class="mt-6" style="display:none;">
+              <form id="uploadForm" class="mt-6">
                 <div class="mb-4">
                   <label for="fileInput" class="block text-sm font-medium text-gray-700 mb-2">Choose file</label>
                   <div class="relative">
@@ -222,6 +195,17 @@
                   Upload
                 </button>
               </form>
+              
+              <div class="mt-6 bg-gray-50 rounded-lg border border-gray-200 p-4">
+                <h3 class="text-md font-medium text-gray-700 mb-2">How It Works:</h3>
+                <ul class="list-disc pl-5 text-sm text-gray-600 space-y-1">
+                  <li>Select your file and click Upload</li>
+                  <li>Your file is stored on IPFS (InterPlanetary File System)</li>
+                  <li>A reference to your file is recorded on the Ethereum blockchain</li>
+                  <li>All blockchain transaction fees are covered by our platform</li>
+                  <li>Access version history and file management in your dashboard</li>
+                </ul>
+              </div>
               
               <div id="result" class="mt-6 p-4 bg-gray-50 rounded-lg border border-gray-200 hidden">
                 <!-- Result content will be inserted here -->
@@ -240,7 +224,7 @@
         function shortenHash(hash) {
           return hash.substring(0, 6) + '...' + hash.substring(hash.length - 4);
         }
-    
+
         function copyToClipboard(text) {
           navigator.clipboard.writeText(text).then(() => {
             alert('Copied to clipboard!');
@@ -249,92 +233,78 @@
           });
         }
       
-        const connectButton = document.getElementById('connectMetamask');
         const uploadForm = document.getElementById('uploadForm');
         const resultDiv = document.getElementById('result');
         const uploadButton = document.getElementById('uploadButton');
       
-        connectButton.addEventListener('click', async () => {
-          if (typeof window.ethereum !== 'undefined') {
-            try {
-              await window.ethereum.request({ method: 'eth_requestAccounts' });
-              connectButton.textContent = 'Connected';
-              connectButton.classList.remove('bg-indigo-600', 'hover:bg-indigo-700');
-              connectButton.classList.add('bg-green-600', 'hover:bg-green-700');
-              uploadForm.style.display = 'block';
-            } catch (error) {
-              console.error('User denied account access');
+        uploadForm.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          const formData = new FormData();
+          formData.append('file', document.getElementById('fileInput').files[0]);
+          
+          uploadButton.textContent = 'Uploading...';
+          uploadButton.disabled = true;
+          
+          try {
+            const response = await fetch('/upload', {
+              method: 'POST',
+              body: formData
+            });
+            const data = await response.json();
+            console.log('Server response:', data);
+            if (data.error) {
+              throw new Error(data.error);
             }
-          } else {
-            console.log('MetaMask not detected');
-            alert('Please install MetaMask to use this application.');
+            resultDiv.innerHTML = `
+  <h3 class="text-lg font-semibold text-green-600 mb-4">Upload Successful!</h3>
+  <div class="flex flex-col md:flex-row gap-6">
+    <div class="bg-white p-4 rounded-lg shadow flex-1">
+      <div class="mb-3">
+        <p class="text-sm font-medium text-gray-500">IPFS Hash</p>
+        <div class="flex items-center mt-1">
+          <span class="text-lg font-mono">${shortenHash(data.ipfs_hash)}</span>
+          <button onclick="copyToClipboard('${data.ipfs_hash}')" class="ml-2 text-gray-500 hover:text-gray-700">
+            <i class="fas fa-copy"></i>
+          </button>
+        </div>
+      </div>
+      <div class="mb-3">
+        <p class="text-sm font-medium text-gray-500">Transaction Hash</p>
+        <div class="flex items-center mt-1">
+          <span class="text-lg font-mono">${shortenHash(data.tx_hash)}</span>
+          <button onclick="copyToClipboard('${data.tx_hash}')" class="ml-2 text-gray-500 hover:text-gray-700">
+            <i class="fas fa-copy"></i>
+          </button>
+        </div>
+        <a href="https://sepolia.etherscan.io/tx/${data.tx_hash}" target="_blank" class="text-sm text-indigo-600 hover:text-indigo-800 mt-1 inline-flex items-center">
+          <span>Verify on Etherscan</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="bg-white p-4 rounded-lg shadow flex-1">
+      <h4 class="text-lg font-semibold text-gray-800 mb-3">File Management</h4>
+      <p class="text-sm text-gray-600 mb-4">Manage your files and access version control features.</p>
+      <a href="/files" class="bg-indigo-700 text-white group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold items-center hover:bg-indigo-600">
+        Manage Files & Versions
+      </a>
+    </div>
+  </div>
+`;
+            resultDiv.classList.remove('hidden');
+          } catch (error) {
+            console.error('Error:', error);
+            resultDiv.innerHTML = `
+              <p class="text-red-600">An error occurred during upload: ${error.message}</p>
+            `;
+            resultDiv.classList.remove('hidden');
+          } finally {
+            uploadButton.textContent = 'Upload';
+            uploadButton.disabled = false;
           }
         });
-      
-        uploadForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const formData = new FormData();
-    formData.append('file', document.getElementById('fileInput').files[0]);
-    
-    uploadButton.textContent = 'Uploading...';
-    uploadButton.disabled = true;
-    
-    try {
-      const response = await fetch('/upload', {
-        method: 'POST',
-        body: formData
-      });
-      const data = await response.json();
-      console.log('Server response:', data);
-      if (data.error) {
-        throw new Error(data.error);
-      }
-      resultDiv.innerHTML = `
-        <h3 class="text-lg font-semibold text-green-600 mb-4">Upload Successful!</h3>
-        <div class="flex flex-col md:flex-row gap-6">
-          <div class="bg-white p-4 rounded-lg shadow flex-1">
-            <div class="mb-3">
-              <p class="text-sm font-medium text-gray-500">IPFS Hash</p>
-              <div class="flex items-center mt-1">
-                <span class="text-lg font-mono">${shortenHash(data.ipfs_hash)}</span>
-                <button onclick="copyToClipboard('${data.ipfs_hash}')" class="ml-2 text-gray-500 hover:text-gray-700">
-                  <i class="fas fa-copy"></i>
-                </button>
-              </div>
-            </div>
-            <div class="mb-3">
-              <p class="text-sm font-medium text-gray-500">Transaction Hash</p>
-              <div class="flex items-center mt-1">
-                <span class="text-lg font-mono">${shortenHash(data.tx_hash)}</span>
-                <button onclick="copyToClipboard('${data.tx_hash}')" class="ml-2 text-gray-500 hover:text-gray-700">
-                  <i class="fas fa-copy"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="bg-white p-4 rounded-lg shadow flex-1">
-            <h4 class="text-lg font-semibold text-gray-800 mb-3">File Management</h4>
-            <p class="text-sm text-gray-600 mb-4">Manage your files and access version control features.</p>
-          <a href="/files" class="bg-indigo-700 text-white group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold items-center hover:bg-indigo-600">
-  Manage Files & Versions
-</a>
-
-
-          </div>
-        </div>
-      `;
-      resultDiv.classList.remove('hidden');
-    } catch (error) {
-      console.error('Error:', error);
-      resultDiv.innerHTML = `
-        <p class="text-red-600">An error occurred during upload: ${error.message}</p>
-      `;
-      resultDiv.classList.remove('hidden');
-    } finally {
-      uploadButton.textContent = 'Upload';
-      uploadButton.disabled = false;
-    }
-  });
-</script>
+      </script>
     </body>
     </html>

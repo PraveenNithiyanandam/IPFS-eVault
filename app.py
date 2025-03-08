@@ -579,11 +579,6 @@ def view_shared_file(public_link):
     
     return jsonify({"error": "You don't have permission to view this file"}), 403
 
-@app.route('/user_manual')
-def user_manual():
-    project_dir = os.path.dirname(os.path.abspath(__file__))
-    return send_from_directory(project_dir, 'E-Vault_User_Manual.pdf')
-
 @app.route('/existing_records')
 def existing_records():
     try:
